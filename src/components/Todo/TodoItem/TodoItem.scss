@@ -1,0 +1,72 @@
+@import "../../../styles/variables.scss";
+
+.todo {
+  position: relative;
+  display: inline-block;
+  font-size: 1.6rem;
+  width: 100%;
+
+  &__content {
+    padding: 1rem 3rem;
+    width: 100%;
+    color: white;
+    background-color: $dark400;
+    border-radius: 0.6rem;
+
+    &--input {
+      border: 1px solid $dark200;
+
+      &:focus {
+        outline: 1px solid $dark200;
+      }
+    }
+
+    &--text {
+      cursor: pointer;
+
+      &--completed {
+        text-decoration: line-through;
+      }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 2.4rem;
+    width: 2.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+
+    &--edit {
+      background-color: $dark200;
+      right: 3.6rem;
+    }
+
+    &--delete {
+      background-color: red;
+      right: 0.6rem;
+    }
+
+    &--confirm {
+      background-color: green;
+      right: 0.6rem;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__error-message {
+    color: $error100;
+    font-size: 1.4rem;
+    align-self: flex-start;
+    margin-top: -2rem;
+  }
+}

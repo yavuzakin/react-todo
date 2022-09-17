@@ -1,0 +1,62 @@
+@import "../../../styles/variables.scss";
+
+.new-todo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 90%;
+  margin-top: 2rem;
+
+  &__form {
+    width: 100%;
+    max-width: 60rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__input {
+    padding: 1rem 3rem;
+    width: 100%;
+    color: white;
+    background-color: $dark400;
+    border: none;
+    border-top-left-radius: 0.6rem;
+    border-bottom-left-radius: 0.6rem;
+
+    &::placeholder {
+      color: $dark200;
+    }
+
+    &:focus {
+      outline: 1px solid $dark200;
+    }
+
+    &--error {
+      &:focus {
+        outline: 1px solid $error100;
+      }
+    }
+  }
+
+  &__button {
+    padding: 1rem 2rem;
+    color: $dark800;
+    background-color: $dark200;
+    font-weight: bold;
+    border: none;
+    border-top-right-radius: 0.6rem;
+    border-bottom-right-radius: 0.6rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $dark100;
+    }
+  }
+
+  &__error-message {
+    color: $error100;
+    font-size: 1.4rem;
+  }
+}
